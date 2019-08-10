@@ -1,0 +1,9 @@
+
+// ENUMERATION
+// Une enumeration est une classe forcément public dont les valeurs sont juste déclarées à la chaîne sans nom de variable. 
+
+package nomPackage;
+
+public enum Couleur {	 // ENUMERATION 
+    JAUNE, ROUGE, NULL;  // Attribution de l'énumération
+}

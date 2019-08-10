@@ -1,0 +1,19 @@
+ // METHODE POUR TESTER LE POURCENTAGE D'ENTIERS NULS CONTENUS DANS UN TABLEAU D'ENTIERS A DEUX DIMENSIONS 
+
+
+        public static int nomMethode (int[][]nomTableau){  	// La méthode restituera un entier pour le pourcentage et prend un paramètre un tableau d'entiers à deux dimensions
+        int nombreNuls = 0;					// Le nombre d'entiers nuls du tableau
+        int pourcentage= 0;					// Le pourcentage d'entiers nuls du tableau
+        int nombreTotal = 0;					// Le nombre total d'entiers dans le tableau
+        for (int[] ligne : nomTableau)				// Pour chaque ligne du tableau
+            { for (int[] colonne : ligne){			// Pour chaque colonne de chaque ligne
+                if (ligne[colonne]==0){				// Si ligne[index=colonne] est nul
+                  nombreNuls++ ;      				// Alors on incrémente le nombre d'entiers nuls de 1          
+                }
+                 nombreTotal++ ;				// Avant une nouvelle itération on ajoute 1 entier au compteur de nombres total 
+            }
+             
+                pourcentage = (nombreNuls*100)/nombreTotal;	// Une fois le tableau parcouru on effectue le calcul avec les valeurs ainsi récupérées
+        }     
+      return pourcentage;					// On retourne ce nombre
+}

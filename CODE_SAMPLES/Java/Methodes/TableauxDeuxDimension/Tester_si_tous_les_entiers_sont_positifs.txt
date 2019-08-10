@@ -1,0 +1,20 @@
+﻿
+// VERIFIER QUE TOUS LES ENTIERS D'UN TABLEAU D'ENTIERS A DEUX DIMENSIONS SONT POSITIFS
+
+
+ 	
+	public static boolean nomMethode(int[][] nomTableau) {	// On crée une méthode qui renvoie un boolean et qui prend notre tableau à deux dimensions en paramètre)
+        boolean sontPositifs = true; 				// On instancie une variable booleenne qui a pour valeur "true" :
+        for (int[] ligne : nomTableau) 				// On crée une boucle "for each" qui dit "pour chaque ligne du tableau :"
+       	 {
+            for (int colonne : ligne) { 			// On imbrique une deuxième boucle for each qui dit "pour chaque colonne  ligne du tableau"
+                if (ligne[colonne] < 0) { 			// Ici on met une condition : si le nombre qui se trouve à ligne[index=colonne] est inférieur à zéro
+                    sontPositifs = false; 			// Alors le boolean devient faux et donc tous les nombres du tableau ne sont pas positifs
+                    break; 					// Du coup on peut sortir de la boucle for each via un break il ne sert à rien de poursuivre le calcul.
+                }
+            }
+      	  }
+        return sontPositifs; 					// On retourne ensuite le boolean : s'il n'y a aucun nombre en dessous de zéro il sera resté à true, sinon il sera devenu false.
+    }
+
+}
